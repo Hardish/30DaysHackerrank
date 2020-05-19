@@ -1,0 +1,33 @@
+package Day26UnitTestingWith_BinarySearchTree.Exe;
+
+import Day26UnitTestingWith_BinarySearchTree.Exe.*;
+
+/*
+A tree interface implemented by :
+        2. EmptyBST: A class represent empty BST
+ */
+public class EmptyBST<D extends Comparable> implements Tree<D> {
+
+    public EmptyBST() {
+
+    }
+    @Override
+    public boolean isEmpty() {
+        return true;
+    }
+
+    @Override
+    public int cardinality() {
+        return 0;
+    }
+
+    @Override
+    public boolean member(D elt) {
+        return false;
+    }
+
+    @Override
+    public NonEmptyBST<D> add(D elt) {
+        return new NonEmptyBST<D>(elt);
+    }
+}
